@@ -38,6 +38,8 @@ Using /remove_face_id you can send a FaceID and the face encoding will be remove
 
 # API
 
+Note: You can use the [json](httpie-collection-face_recognition.json) to import it into [HTTPie](https://httpie.io/) collection
+
 <table>
   <tr>
     <th>Path</th>

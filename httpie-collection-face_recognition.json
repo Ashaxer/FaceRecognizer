@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "face_recognition",
+    "icon": {
+      "name": "circle",
+      "color": "green"
+    },
+    "auth": {
+      "type": "apiKey",
+      "target": "headers",
+      "credentials": {
+        "username": "x-api-key",
+        "password": "anonymous"
+      }
+    },
+    "requests": [
+      {
+        "name": "",
+        "url": "http://IP.IP.IP.IP:PORT/recognize",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": true,
+            "fields": [
+              {
+                "name": "show_distance",
+                "value": "true",
+                "enabled": true,
+                "type": "text"
+              },
+              {
+                "name": "tolerance",
+                "value": "0.6",
+                "enabled": true,
+                "type": "text"
+              },
+              {
+                "name": "file",
+                "value": "",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "",
+        "url": "http://IP.IP.IP.IP:PORT/add",
+        "method": "POST",
+        "headers": [],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": true,
+            "fields": [
+              {
+                "name": "national_id",
+                "value": "",
+                "enabled": true,
+                "type": "text"
+              },
+              {
+                "name": "file",
+                "value": "",
+                "enabled": true,
+                "type": "text"
+              }
+            ]
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "",
+        "url": "http://IP.IP.IP.IP:PORT/get_encoding",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [
+          {
+            "name": "national_id",
+            "value": "",
+            "enabled": true
+          }
+        ],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "",
+        "url": "http://IP.IP.IP.IP:PORT/get_face_ids",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [
+          {
+            "name": "national_id",
+            "value": "",
+            "enabled": true
+          }
+        ],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "",
+        "url": "http://IP.IP.IP.IP:PORT/remove_face_id",
+        "method": "GET",
+        "headers": [],
+        "queryParams": [
+          {
+            "name": "unique_face_id",
+            "value": "",
+            "enabled": true
+          }
+        ],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "form",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}

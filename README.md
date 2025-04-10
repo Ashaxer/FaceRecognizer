@@ -5,7 +5,13 @@ Featured with API using Flask, ability to add/remove face data to database, reco
 
 # How it works
 ## Add
-Using /add or  you can upload your image to the server 
+Using /add (or --source argument) you can send your image and national id (--source-national-id argument), the bot will extract the encodings of the first face in the image and stores it to the database referrenced by national id.
+
+## Recognize
+Using /recognize (or --recognize-face) you can send your image, the bot will detect the first face in the image and returs the results.
+
+## Download Face DLIB Encodings
+...
 
 # API
 

@@ -2,16 +2,27 @@
 A simpe FaceRecognition program based on [ageitgey/face_recognition](https://github.com/ageitgey/face_recognition) project using [dlib](http://dlib.net/) library.
 
 Featured with API using Flask, ability to add/remove face data to database, recognize faces and return dlib face encodings
-
+Note: images will not be stored in database but the MD5 hash of the image file will to prevent storing exact same image face encodings.
 # How it works
+
+## Authorization
+Authentication is required for all requests and is passed as "x-api-key" in header.
+for now, keys are stored inside app.py file as list: API_KEYS
+
 ## Add
-Using /add (or --source argument) you can send your image and national id (--source-national-id argument), the bot will extract the encodings of the first face in the image and stores it to the database referrenced by national id.
+Using /add (or --source argument) you can send your image and national id (--source-national-id argument), the bot will extract the encodings of the first face in the image and stores it to the database referrenced by FaceID and national id.
 
 ## Recognize
-Using /recognize (or --recognize-face) you can send your image, the bot will detect the first face in the image and returs the results.
+Using /recognize (or --recognize-face argument) you can send your image (--source, --tolerance and --show-distance arguments), the bot will detect the first face in the image and returs the results.
 
-## Download Face dlib Encodings
-...
+## Download Face dlib Encoding data
+Using /get_encoding (or --get-encoding argument) and face national id (--source-national-id argument) you can download dlib encoding data from database by FaceIDs wraped in pickle format.
+
+## Get Face IDs
+In case you need to get track of stored FaceIDs using national id, you can use /get_face_idsand send national id to get all FaceIDs list.
+
+## Remove Face ID from database
+Using /remove_face_id you can send a FaceID and the face encoding will be removed from database.
 
 # API
 
@@ -70,8 +81,4 @@ Using /recognize (or --recognize-face) you can send your image, the bot will det
     <td><strong>TEXT</strong></td>
   </tr>
 </table>
-
-
-Authentication is required for all requests and is passed as "x-api-key" in header
-
 

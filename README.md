@@ -10,7 +10,7 @@ Using /add (or --source argument) you can send your image and national id (--sou
 ## Recognize
 Using /recognize (or --recognize-face) you can send your image, the bot will detect the first face in the image and returs the results.
 
-## Download Face DLIB Encodings
+## Download Face dlib Encodings
 ...
 
 # API
